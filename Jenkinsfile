@@ -17,7 +17,12 @@ pipeline{
         }
         stage("Testing"){
             steps{
-                sh "npx cypress  run --headless --spec cypress/e2e/tests/*.cy.js"
+                sh "npx cypress  run  --spec cypress/e2e/tests/*.cy.js"
+            }
+        }
+        stage("Build"){
+            steps{
+                echo "deploy"
             }
         }
     }
