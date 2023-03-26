@@ -11,8 +11,8 @@ pipeline{
                 
                 sh "npm i"
                 sh "npm install cypress --save-dev"
-                sh "docker build -t reactapp --no-cache ."
-                sh "docker run -d --name react -p 8007:3000 reactapp"
+                sh "docker build -t appruebas --no-cache ."
+                sh "docker run -d --name react -p 8007:3000 appruebas"
             }
         }
         stage("Testing"){
@@ -22,11 +22,25 @@ pipeline{
         }
         stage("Deploy"){
             steps{
-                sh "docker stop react"
-                sh "docker rm react"
+                sh "docker stop appruebas"
+                sh "docker rm appruebas"
+                sh "docker rmi appruebas"
+                sh "docker build -t reactapp --no-cache ."
             }
         }
     }
 
-    
+      post{
+        always{
+            sh "docker stop appruebas"
+            sh "docker rm appruebas"
+            sh "docker rmi appruebas"
+        }
+        success{
+            echo "========pipeline executed successfully ========"
+        }
+        failure{
+            echo "========pipeline execution failed========"
+        }
+    }
 }
