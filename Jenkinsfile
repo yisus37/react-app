@@ -22,8 +22,8 @@ pipeline{
         }
         stage("Deploy"){
             steps{
-                sh "docker stop appruebas"
-                sh "docker rm appruebas"
+                sh "docker stop react"
+                sh "docker rm react"
                 sh "docker rmi appruebas"
                 sh "docker build -t reactapp --no-cache ."
             }
@@ -32,8 +32,8 @@ pipeline{
 
       post{
         always{
-            sh "docker stop appruebas"
-            sh "docker rm appruebas"
+            sh "docker stop react"
+            sh "docker rm react"
             sh "docker rmi appruebas"
         }
         success{
