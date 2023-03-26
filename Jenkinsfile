@@ -20,7 +20,7 @@ pipeline{
                 sh "npx cypress  run  --spec cypress/e2e/tests/*.cy.js"
             }
         }
-        stage("Build"){
+        stage("Deploy"){
             steps{
                 sh "docker stop react"
                 sh "docker rm react"
