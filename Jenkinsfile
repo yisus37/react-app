@@ -10,7 +10,7 @@ pipeline{
             steps{
                 
                 sh "npm i"
-                sh "docker build -t reactApp/yisus37 --no-cache ."
+                sh "docker build -t reactapp --no-cache ."
                 sh "docker run -d --name react -p 8007:300 reactApp/yisus37"
             }
         }
