@@ -22,7 +22,8 @@ pipeline{
         }
         stage("Build"){
             steps{
-                echo "deploy"
+                sh "docker stop react"
+                sh "docker rm react"
             }
         }
     }
