@@ -10,6 +10,7 @@ pipeline{
             steps{
                 
                 sh "npm i"
+                sh "npm install cypress --save-dev"
                 sh "docker build -t reactapp --no-cache ."
                 sh "docker run -d --name react -p 8007:3000 reactapp"
             }
