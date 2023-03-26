@@ -3,7 +3,7 @@
 describe('App.cy.js', () => {
 
   beforeEach(() => {
-    cy.visit("http://localhost:3000/")
+    cy.visit("http://localhost:8007/")
    });
   it('APP Prueba', () => {
     cy.get('#inp1').type("jose")

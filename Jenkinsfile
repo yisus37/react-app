@@ -8,8 +8,10 @@ pipeline{
         }
         stage("Build"){
             steps{
+                
                 sh "npm i"
-                sh "npm start"
+                sh "docker build -t reactApp/yisus37 --no-cache"
+                sh "docker run -d --name react -p 8007:300 reactApp/yisus37"
             }
         }
         stage("Testing"){
