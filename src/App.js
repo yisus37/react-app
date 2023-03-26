@@ -21,9 +21,10 @@ function App() {
         </a>
 
         <form  onSubmit={handler}>
+          <h4>Este es un formulario</h4>
           <input name='inp1' id='inp1' type="text" placeholder='nombre' />
           <input name='inp2' id='inp2' type="text" placeholder='apellido' />
-          <button id='btn'>  SALUDAR</button>
+          <button id='btn'> SAlUDARE</button>
         </form>
         <h5 id='nom'></h5>
       </header>
