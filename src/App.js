@@ -24,7 +24,7 @@ function App() {
           <h4>Este es un formulario</h4>
           <input name='inp1' id='inp1' type="text" placeholder='nombre' />
           <input name='inp2' id='inp2' type="text" placeholder='apellido' />
-          <button id='btn'> SAlUDARE</button>
+          <button id='btn'> SAlUDARE a Johan</button>
         </form>
         <h5 id='nom'></h5>
       </header>
