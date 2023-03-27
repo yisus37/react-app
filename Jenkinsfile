@@ -34,6 +34,7 @@ pipeline{
 
       post{
         always{
+            echo "========pipeline executed successfully ========"
              /*sh "docker --context docker-desa stop webpruebas"  */
              /*sh "docker --context docker-desa rm webpruebas"  */
              /*sh "docker --context docker-desa rmi yisus377/reactapp" */
