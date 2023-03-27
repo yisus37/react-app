@@ -24,7 +24,8 @@ pipeline{
             steps{
                 sh "docker login -u yisus377 -p 1arrepientete97"
                 sh "docker --context docker-desa push yisus377/reactapp"
-                sh "cd /home/yisus37/Escritorio/devs/appweb/"
+                sh "cd .."
+                sh "cd compose-tms"
                 sh "docker compose pull appweb"
                 sh "docker compose up -d appweb"
             }
