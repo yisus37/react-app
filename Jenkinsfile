@@ -26,6 +26,8 @@ pipeline{
                  /*sh "docker login -u yisus377 -p 1arrepientete97" */
                  /*sh "docker --context docker-desa push yisus377/reactapp" */
                 sh "cd /var/lib/jenkins/workspace/compose-tms"
+                sh "ls"
+                sh "pwd"
                 sh "docker compose pull appweb"
                 sh "docker compose up -d appweb"
             }
